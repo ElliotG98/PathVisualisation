@@ -64,3 +64,14 @@ class Node:
         elif self.mode == 'start' or self.mode == 'end' or self.mode == 'path':
             pygame.draw.rect(screen, blue, (self.x * title_size, self.y * title_size, title_size, title_size), 0)
             pygame.draw.rect(screen, grey, (self.x * title_size, self.y * title_size, title_size, title_size), 1)
+
+
+# CREATE 2D ARRAY [ROW, COL]
+grid = [[0 for i in range(rows)] for j in range(cols)]
+
+# FILL GRID WITH EMPTY TILE
+for i in range(rows):
+    for j in range(cols):
+        grid[i][j] = Node(i, j)
+
+# SET SCREEN BORDERS AS OBSTACLES
