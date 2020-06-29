@@ -131,7 +131,7 @@ num = 0
 doOnce = 0
 start = False
 
-# open_set.append(start_node)
+
 open_set.append(start_node)
 
 
@@ -268,9 +268,8 @@ def retrace_path():
 
 paths = retrace_path()
 
-# reset grids
 
-
+# RESET GRID
 def reset_grid():
     for i in range(rows):
         for j in range(cols):
